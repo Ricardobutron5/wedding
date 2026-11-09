@@ -20,7 +20,7 @@
     <meta property="og:description"
     content="Nos dará mucha alegría compartir contigo nuestra ceremonia religiosa.">
     <meta property="og:url" content="https://wedding-butron-garcia/">
-     <meta
+    <meta
     property="og:image"
     content="https://github.com/Ricardobutron5/wedding/blob/main/assets/image.png?raw=true"
     >
@@ -1499,6 +1499,7 @@ JAVASCRIPT
     */
     
     
+    
     const INVITADOS = {
         
         "8f3a7c21-6b42-4d9e-a185-2c7f94e03b61": {
@@ -1535,9 +1536,6 @@ JAVASCRIPT
             nombre: "Eloy y Lucero",
             lugares: 2
         },
-
-        
-        // NUEVOS INVITADOS
         
         "a0ee530c-1113-4426-97c8-b584c46f4e19": {
             nombre: "Arturo y Lorena",
@@ -1574,7 +1572,6 @@ JAVASCRIPT
             lugares: 1
         },
         
-        
         "93a4923f-60fe-46f9-8ebe-7a00b50f28f5": {
             nombre: "Alejandra y Rodolfo",
             lugares: 2
@@ -1583,9 +1580,35 @@ JAVASCRIPT
         "895ed5df-e64e-4f96-99ce-e0253fb8d8da": {
             nombre: "Anastasio y Ninfa",
             lugares: 2
+        },
+        
+        "b74f1a92-6d83-4c50-9e27-a15f08d3c642": {
+            nombre: "Marta Gonzalez",
+            lugares: 2
+        },
+        
+        "3e92c6b1-84d7-4f0a-a536-71c8e29b4d05": {
+            nombre: "José Juan y Yolanda",
+            lugares: 2
+        },
+        
+        "a65d2e83-7b41-4c96-8f02-d39e174a5b68": {
+            nombre: "Alexis y Karina",
+            lugares: 2
+        },
+        
+        "c83e5a71-2f94-4bd0-8a65-19e7f42c3d06": {
+            nombre: "Maleni Baez",
+            lugares: 2
+        },
+        
+        "7b26d4e9-51a3-4c80-bf72-8e05a19d63c4": {
+            nombre: "Juan Butrón",
+            lugares: 2
         }
         
     };
+    
     
     
     
@@ -1735,29 +1758,29 @@ JAVASCRIPT
         if (!invitado) return;
         
         
-        const mensajes = {
-            
-            si: `Hola ${CONFIG.novios} 
+           const mensajes = {
 
-Confirmo mi asistencia a su ${CONFIG.evento} del ${CONFIG.fecha}.
+                si: `Hola ${CONFIG.novios} %0A
 
-Invitado: ${invitado.nombre}
-Invitación: ${q} 
-Lugares reservados: ${invitado.lugares}
+Confirmo mi asistencia a su ${CONFIG.evento} del ${CONFIG.fecha}.%0A%0A
 
-¡Nos vemos pronto!`,
-            
-            
-            no: `Hola ${CONFIG.novios} 
+Invitado: ${invitado.nombre}%0A
+Invitación: ${q}%0A
+Lugares reservados: ${invitado.lugares}%0A%0A
 
-Lamentablemente no podré acompañarlos en su ${CONFIG.evento} del ${CONFIG.fecha}.
+¡Nos vemos pronto! `,
 
-Invitado: ${invitado.nombre}
-Invitación: ${q}
+
+                no: `Hola ${CONFIG.novios} %0A
+
+Lamentablemente no podré acompañarlos en su ${CONFIG.evento} del ${CONFIG.fecha}.%0A%0A
+
+Invitado: ${invitado.nombre}%0A
+Invitación: ${q}%0A%0A
 
 Muchas gracias por la invitación. `
-            
-        };
+
+            };
         
         
         const whatsappURL = mensaje => {
